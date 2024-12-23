@@ -1,8 +1,7 @@
 name: Запуск API-тестов MTS-Reqres
 
 on:
-  push:
-    branches: [ reqres ]
+ push
 
 jobs:
   tests:
