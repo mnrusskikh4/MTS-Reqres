@@ -1,6 +1,6 @@
 [ {
-  "buildOrder" : 2,
-  "reportUrl" : "https://mnrusskikh4.github.io/MTS-Reqres/2",
+  "buildOrder" : 3,
+  "reportUrl" : "https://mnrusskikh4.github.io/MTS-Reqres/3",
   "reportName" : "Allure Report with history",
   "data" : {
     "failed" : 0,
