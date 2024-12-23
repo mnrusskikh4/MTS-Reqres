@@ -22,6 +22,16 @@ jobs:
         continue-on-error: true
         run: mvn clean test
 
+      - name: Создание директории для Allure history
+        run: mkdir -p target/allure-history
+
+      - name: Проверка наличия результатов Allure
+        run: |
+          if [ ! -d "target/allure-results" ] || [ -z "$(ls -A target/allure-results)" ]; then
+            echo "Allure results not found!";
+            exit 1;
+          fi
+
       - name: Генерация отчета Allure
         uses: simple-elf/allure-report-action@v1
         id: allure-report
@@ -36,4 +46,4 @@ jobs:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           personal_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: target/allure-history
+          publish_dir: target/allure-report
