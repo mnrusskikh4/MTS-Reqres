@@ -1,4 +1,4 @@
-name: Запуск тестов MTS-Reqres
+name: Запуск API-тестов MTS-Reqres
 
 on:
  push
